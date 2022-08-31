@@ -1,21 +1,20 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import './style.css'
+
+import GitHubIcon from "@mui/icons-material/GitHub";
+
+import "./style.css";
 
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-dark">
+      <nav className="navbar  navbar-dark navbar-expand-lg bg-dark">
         <div className="container-fluid">
-          <img
-            src="https://www.freeiconspng.com/thumbs/github-icon/github-icon-9.png"
-            alt="github icon"
-            width="60px"
-          />
+          <GitHubIcon style={{ fill: "white" }} fontSize="large" />
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
+            <ul className="navbar-nav">
+              <li className="nav-item m-8">
                 <Link
                   className="nav-link active text-white"
                   aria-current="page"
