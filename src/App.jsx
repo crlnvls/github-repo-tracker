@@ -6,13 +6,47 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <Navbar/>,
-    <Routes>
-      <Route path="/" element={<><Navbar/><Pages.Home /></>}></Route>
-      <Route path="/:user" element={<><Navbar/><Pages.User /></>}></Route>
-      <Route path="/:user/:repo" element={<><Navbar/><Pages.Repo /></>}></Route>
-      <Route path="*" element={<><Navbar/><Pages.NothingFound /></>}></Route>
-    </Routes>
+    (<Navbar />),
+    (
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Pages.Home />
+            </>
+          }
+        ></Route>
+        <Route
+          path="user/:user"
+          element={
+            <>
+              <Navbar />
+              <Pages.User />
+            </>
+          }
+        ></Route>
+        <Route
+          path="user/:user/:repo"
+          element={
+            <>
+              <Navbar />
+              <Pages.Repo />
+            </>
+          }
+        ></Route>
+        <Route
+          path="*"
+          element={
+            <>
+              <Navbar />
+              <Pages.NothingFound />
+            </>
+          }
+        ></Route>
+      </Routes>
+    )
   );
 }
 
