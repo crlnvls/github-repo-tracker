@@ -36,7 +36,6 @@ export default function SearchForm({ getUser, getRepo }) {
             <SearchIcon style={{ fill: "black" }} />
           </IconButton>
         </Box>
-        ;
       </form>
     </>
   );

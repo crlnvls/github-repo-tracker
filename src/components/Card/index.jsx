@@ -1,23 +1,48 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
+import moment from "moment";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
+import AltRouteOutlinedIcon from "@mui/icons-material/AltRouteOutlined";
+import AdjustOutlinedIcon from "@mui/icons-material/AdjustOutlined";
+import ForkLeftOutlinedIcon from "@mui/icons-material/ForkLeftOutlined";
+import CircleIcon from "@mui/icons-material/Circle";
 
 const Card = ({ data }) => {
   return (
     <>
       <div className="card" style={{ width: "40rem" }}>
         <div className="card-body">
-          <div class="d-flex flex-row mb-2">
+          <div className="d-flex flex-row mb-2">
             <a href={data.clone_url} target="blank">
               {data.name}
             </a>
-            <p className="mx-4  btn btn-outline-dark">{data["visibility"]}</p>
+            <p className="mx-4 btn btn-outline-dark rounded-pill btn-sm">
+              {data["visibility"]}
+            </p>
           </div>
           <p className="card-text">{data["description"]}</p>
         </div>
-        <div class="d-flex flex-row mb-3">
-          <div class="p-2">Flex item 1</div>
-          <div class="p-2">Flex item 2</div>
-          <div class="p-2">Flex item 3</div>
+        <div className="d-flex flex-row mb-2">
+          <div className="p-2">{data["language"]}</div>
+
+          <a href={data.stargazers_url} className="p-2">
+            <StarBorderIcon fontSize="small" className="mx-1" />
+            {data.stargazers_count}
+          </a>
+
+          <a href={data.forks_url} className="p-2">
+            <AltRouteOutlinedIcon fontSize="small" className="mx-1" />
+            {data.forks_count}
+          </a>
+          <a href={data.issues_url} className="p-2">
+            <AdjustOutlinedIcon fontSize="small" className="mx-1" />
+            {data.open_issues_count}
+          </a>
+          <a href={data.pulls_url} className="p-2">
+            <ForkLeftOutlinedIcon fontSize="small" className="mx-1" />
+            {data.watchers_count}
+          </a>
+          <p className="p-2">{moment(data.updated_at).fromNow()}</p>
         </div>
       </div>
     </>
