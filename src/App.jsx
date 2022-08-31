@@ -19,7 +19,7 @@ function App() {
           }
         ></Route>
         <Route
-          path="user/:user"
+          path="/user"
           element={
             <>
               <Navbar />
