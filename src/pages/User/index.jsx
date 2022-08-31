@@ -5,25 +5,40 @@ import "./style.css";
 
 import SearchForm from "../../components/SearchForm";
 import Card from "../../components/Card";
+import { useNavigate } from "react-router-dom";
 
 const User = () => {
   const [user, setUser] = useState("");
   const [repos, setRepo] = useState("");
+  const navigate = useNavigate()
 
   const getUser = async (incomingUsername) => {
-    const userResult = await axios.request(
-      `https://api.github.com/users/${incomingUsername}`
-    );
-    console.log("user: ", userResult.data);
-    setUser(userResult);
+
+    try {
+      const userResult = await axios.request(
+        `https://api.github.com/users/${incomingUsername}`
+      );
+      console.log("user: ", userResult.data);
+      setUser(userResult);
+    } catch (error) {
+      navigate('*')
+      console.log(error)
+    }
+
   };
 
   const getRepo = async (incomingUsername) => {
-    const reposResult = await axios.request(
-      `https://api.github.com/users/${incomingUsername}/repos`
-    );
-    console.log("repo: ", reposResult);
-    setRepo(reposResult);
+
+    try {
+      const reposResult = await axios.request(
+        `https://api.github.com/users/${incomingUsername}/repos`
+      );
+      console.log("repo: ", reposResult);
+      setRepo(reposResult);
+    } catch (error) {
+      navigate('*')
+      console.log(error)
+    }
   };
 
   return (
