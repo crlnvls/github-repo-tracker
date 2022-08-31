@@ -28,7 +28,7 @@ function App() {
           }
         ></Route>
         <Route
-          path="user/:user/:repo"
+          path="user/:repo"
           element={
             <>
               <Navbar />
