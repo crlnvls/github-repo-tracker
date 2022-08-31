@@ -4,6 +4,7 @@ import axios from "axios";
 import './style.css';
 
 import SearchForm from '../../components/SearchForm'
+import Card from "../../components/Card";
 
 const User = () => {
 
@@ -34,9 +35,7 @@ const User = () => {
     <div className='result' style={{display: !user ? 'none' : 'flex'}}>
         <img src={user && user.data['avatar_url']} alt='image'/>
         <p>Name: {user && user.data.name}</p>
-        <p>Repos names: {
-                repos && repos.data.map(repo => repo.name)
-            }</p>
+         {repos && repos.data.map(repo => <Card key={repo.id} data={repo}/>)}
         {/* <p>User: {user} Repo: {repo}</p> */}
     </div>
     </>

@@ -27,7 +27,7 @@ function App() {
             </>
           }
         ></Route>
-        <Route
+        {/* <Route
           path="user/:repo"
           element={
             <>
@@ -35,7 +35,7 @@ function App() {
               <Pages.Repo />
             </>
           }
-        ></Route>
+        ></Route> */}
         <Route
           path="*"
           element={
