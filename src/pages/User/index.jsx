@@ -28,12 +28,19 @@ const User = () => {
 
   return (
     <>
-      <h1>User</h1>
       <SearchForm getUser={getUser} getRepo={getRepo} />
       <div className="result" style={{ display: !user ? "none" : "flex" }}>
-        <img src={user && user.data["avatar_url"]} alt="image" />
-        <p>Name: {user && user.data.name}</p>
-        {repos && repos.data.map((repo) => <Card key={repo.id} data={repo} />)}
+        <div className="user-info">
+          <img src={user && user.data["avatar_url"]} alt="image" />
+          <p className="name-container">
+            <div className="name-wrapper">
+              <h2>{user && user.data.name}</h2>
+            </div>
+          </p>
+        </div>
+        <div className="card-container">
+          {repos && repos.data.map((repo) => <Card key={repo.id} data={repo} />)}
+        </div>
       </div>
     </>
   );

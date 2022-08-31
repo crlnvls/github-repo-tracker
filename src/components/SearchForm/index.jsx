@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import axios from "axios";
 
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 import IconButton from "@mui/material/IconButton";
+import './style.css'
 
 export default function SearchForm({ getUser, getRepo }) {
   const [input, setInput] = useState("");
@@ -36,7 +36,6 @@ export default function SearchForm({ getUser, getRepo }) {
             <SearchIcon style={{ fill: "black" }} />
           </IconButton>
         </Box>
-        ;
       </form>
     </>
   );

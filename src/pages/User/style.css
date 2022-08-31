@@ -1,3 +1,30 @@
 .result {
     flex-direction: column;
 }
+
+.user-info {
+    display: flex;
+    width: 85%;
+    justify-content: center;
+    margin: 30px auto 70px auto;
+}
+
+img {
+    height: 250px;
+    width: auto;
+    margin-right: 10vw;
+    border-radius: 50%;
+}
+
+.name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-wrapper {
+    padding: 10px 140px 10px 30px;
+    box-shadow: 6px 5px 6px -1px black;
+}
+
+
