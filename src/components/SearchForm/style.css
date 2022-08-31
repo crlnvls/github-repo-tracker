@@ -1,4 +1,23 @@
 form {
-    margin: 30px auto;
-    width: 240px;
+  display: flex;
+  margin: 30px 35%;
+  width: 400px;
+}
+
+.input {
+  background-color: #343a3f;
+  color: #f0f3f6;
+  border-radius: 10px;
+  border: #343a3f solid 1px;
+  width: 400px;
+}
+
+.search {
+  color: #f0f3f6;
+  width: 300px;
+}
+
+.heading {
+  text-align: center;
+  margin: 20px;
 }

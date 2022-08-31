@@ -32,14 +32,15 @@ const User = () => {
       <div className="result" style={{ display: !user ? "none" : "flex" }}>
         <div className="user-info">
           <img src={user && user.data["avatar_url"]} alt="image" />
-          <p className="name-container">
+          <div className="name-container">
             <div className="name-wrapper">
               <h2>{user && user.data.name}</h2>
             </div>
-          </p>
+          </div>
         </div>
         <div className="card-container">
-          {repos && repos.data.map((repo) => <Card key={repo.id} data={repo} />)}
+          {repos &&
+            repos.data.map((repo) => <Card key={repo.id} data={repo} />)}
         </div>
       </div>
     </>

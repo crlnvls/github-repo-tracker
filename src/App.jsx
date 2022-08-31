@@ -27,15 +27,6 @@ function App() {
             </>
           }
         ></Route>
-        {/* <Route
-          path="user/:repo"
-          element={
-            <>
-              <Navbar />
-              <Pages.Repo />
-            </>
-          }
-        ></Route> */}
         <Route
           path="*"
           element={

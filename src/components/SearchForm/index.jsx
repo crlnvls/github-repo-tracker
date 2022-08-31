@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 
 import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+import InputBase from "@mui/material/InputBase";
+
 import SearchIcon from "@mui/icons-material/Search";
 import IconButton from "@mui/material/IconButton";
-import './style.css'
+import Divider from "@mui/material/Divider";
+
+import "./style.css";
 
 export default function SearchForm({ getUser, getRepo }) {
   const [input, setInput] = useState("");
@@ -23,19 +26,17 @@ export default function SearchForm({ getUser, getRepo }) {
 
   return (
     <>
+      <h3 className="heading">Search an username</h3>
       <form onSubmit={handleSubmit}>
-        <Box sx={{ display: "flex", alignItems: "flex-end" }}>
-          <TextField
-            autoFocus
-            label="Search..."
-            variant="standard"
-            size="small"
-            onChange={handleUser}
-          />
-          <IconButton type="submit">
-            <SearchIcon style={{ fill: "black" }} />
-          </IconButton>
-        </Box>
+        <input
+          autoFocus
+          className="input"
+          placeholder="Search..."
+          onChange={handleUser}
+        />
+        <IconButton type="submit">
+          <SearchIcon className="search" fontSize="large" />
+        </IconButton>
       </form>
     </>
   );
