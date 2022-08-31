@@ -26,7 +26,7 @@ export default function SearchForm({ getUser, getRepo }) {
 
   return (
     <>
-      <h3 className="heading">Search an username</h3>
+      <h3 className="heading">Search by username</h3>
       <form onSubmit={handleSubmit}>
         <input
           autoFocus
