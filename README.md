@@ -2,7 +2,7 @@
 
 A React App that display github repositories after submitting their username using [Github API](https://docs.github.com/pt/rest/repos/repos#list-repositories-for-a-user)
 
-Navigate to the url [githubrepository-tracker.netlify.app](githubrepository-tracker.netlify.app)
+Navigate to the url [https://githubrepository-tracker.netlify.app/](https://githubrepository-tracker.netlify.app/)
 
 ## Installation & Usage
 
