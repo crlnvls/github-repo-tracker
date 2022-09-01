@@ -18,7 +18,7 @@ img {
 
 .name-container {
   display: flex;
-  justify-content: al;
+  justify-content: center;
   align-items: center;
   color: #f0f3f6;
 }
