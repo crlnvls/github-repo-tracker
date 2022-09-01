@@ -12,13 +12,13 @@
 img {
   height: 250px;
   width: auto;
-  margin-right: 10vw;
+  margin-right: 5vw;
   border-radius: 50%;
 }
 
 .name-container {
   display: flex;
-  justify-content: center;
+  justify-content: al;
   align-items: center;
   color: #f0f3f6;
 }
