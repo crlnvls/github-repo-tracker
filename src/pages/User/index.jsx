@@ -8,8 +8,8 @@ import Card from "../../components/Card";
 import { useNavigate } from "react-router-dom";
 
 const User = () => {
-  const [user, setUser] = useState("");
-  const [repos, setRepo] = useState("");
+  const [user, setUser] = useState("crlnvls");
+  const [repos, setRepo] = useState("crlnvls");
   const navigate = useNavigate()
 
   const getUser = async (incomingUsername) => {
